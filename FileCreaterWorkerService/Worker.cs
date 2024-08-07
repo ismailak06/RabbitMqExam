@@ -101,14 +101,9 @@ namespace FileCreaterWorkerService
             table.Columns.Add("ProductNumber", typeof(string));
             table.Columns.Add("Color", typeof(string));
 
-            products.ForEach(x =>
-            {
-                table.Rows.Add(x.ProductId, x.Name, x.ProductNumber, x.Color);
-
-            });
+            products.ForEach(x => table.Rows.Add(x.ProductId, x.Name, x.ProductNumber, x.Color));
 
             return table;
-
         }
     }
 }
